@@ -202,7 +202,7 @@ header .header{
 }
 
 .navbar li {
-    display: inline;
+    display: inline-block;
     list-style: none;
     margin: 0 30px 0 0;
 }
@@ -214,10 +214,12 @@ header .header{
     line-height: 50px;
     text-decoration: none;
     transition: color .2s;
+    display: block;
+    height: 57px;
 }
 
 .navbar a.active {
-    color: #000;
+    border-bottom: 18px solid #f5f3ee;
 }
 
 /*--------------------------------------------------
@@ -376,16 +378,16 @@ ul.color-bullet li::before {
     top: -70px;
 }
 
-#floorplans .wide-buttons div{
+#floorplans .wide-buttons > div{
     background-color: #fff;
     padding: 17px;
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
 
-#floorplans .wide-buttons a{
+#floorplans .wide-buttons > div > div{
     display: block;
-    padding: 10px;
+    padding: 10px 20px;
     border: 2px solid var(--green);
     text-align: center;
     font-size: 60px;
@@ -394,8 +396,7 @@ ul.color-bullet li::before {
     color: var(--green);
 }
 
-#floorplans .wide-buttons a:hover,
-#floorplans .wide-buttons a.active{
+#floorplans .wide-buttons > div > div.inside{
     background-color: var(--green);
     color: #fff;
 }
