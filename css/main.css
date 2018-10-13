@@ -204,7 +204,7 @@ header .header{
 .navbar li {
     display: inline-block;
     list-style: none;
-    margin: 0 30px 0 0;
+    margin: 0 60px 0 0;
 }
 
 .navbar a {
@@ -270,15 +270,23 @@ header .header{
 
 .two-logo div:last-child{
     text-align: left;
+    margin-bottom: 100px;
 }
 
-#about .left-block,
-#amenities{
+#about{
+    background: url(../img/bg_02.png);
+}
+
+#about .left-block{
+    float: left;
+    padding-left: 8%;
+    position: relative;
+    top: -100px;
     background-color: #f5f3ee;
 }
 
 #about .left-block{
-    height: 1000px;
+    height: 900px;
 }
 
 #about .left-block .container{
@@ -303,12 +311,36 @@ header .header{
 --------------------------------------------------*/
 
 #amenities{
+    background-color: #f5f3ee;
     padding-bottom: 80px;
 }
 
 #amenities .container{
     position: relative;
     margin-top: -120px;
+    min-height: 540px;
+}
+
+#amenities .text-block{
+    position: absolute;
+    z-index: 10;
+}
+
+#amenities .green-brush{
+    width: 297px;
+    height: 295px;
+    position: absolute;
+    right: -90px;
+    bottom: -70px;
+    background: url(../img/green_brush_02.png) no-repeat;
+}
+
+#amenities .text{
+    padding-bottom: 70px;
+}
+
+#amenities .border{
+    background: url(../img/dog.png) no-repeat right bottom;
 }
 
 #amenities .amenities{
@@ -487,7 +519,7 @@ ul.color-bullet li::before {
 }
 
 #neighborhood .right-block{
-    padding: 50px;
+    padding: 50px 5% 50px 50px;
     float: right;
     background: #f5f3ee;
     position: relative;
@@ -496,6 +528,20 @@ ul.color-bullet li::before {
 
 #neighborhood .container{
     position: relative;
+}
+
+#neighborhood .text-block{
+    position: absolute;
+    z-index: 10;
+}
+
+#neighborhood .grey-brush{
+    width: 285px;
+    height: 301px;
+    position: absolute;
+    right: -40px;
+    top: -30px;
+    background: url(../img/grey_brush_02.png) no-repeat;
 }
 
 #neighborhood .text-block{
@@ -615,6 +661,34 @@ ul.color-bullet li::before {
     float: right;
 }
 
+#map .container{
+    position: relative;
+    height: 700px;
+}
+
+#map .card{
+    position: absolute;
+    z-index: 10;
+}
+
+#map .grey-brush{
+    width: 321px;
+    height: 290px;
+    position: absolute;
+    left: -80px;
+    bottom: -70px;
+    background: url(../img/grey_brush_01.png) no-repeat;
+}
+
+#map .green-brush{
+    width: 245px;
+    height: 467px;
+    position: absolute;
+    right: -60px;
+    top: -60px;
+    background: url(../img/green_brush_01.png) no-repeat;
+}
+
 /*--------------------------------------------------
   CONTACT
 --------------------------------------------------*/
@@ -631,6 +705,10 @@ ul.color-bullet li::before {
     grid-gap: 30px;
 }
 
+#contact .text{
+    padding-top: 15px;
+}
+
 #contact .text-block form input[type="text"],
 #contact .text-block form input[type="tel"],
 #contact .text-block form input[type="email"],
@@ -644,6 +722,7 @@ ul.color-bullet li::before {
     margin-bottom: 15px;
     text-indent: 10px;
     font-size: 16px;
+    outline: none;
 }
 
 #contact .text-block form input[type="text"]::placeholder,
@@ -658,13 +737,32 @@ ul.color-bullet li::before {
     margin-bottom: 10px;
 }
 
+#contact .text-block form select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    background: #f5f3ee url(../img/caret.svg) no-repeat 98% center;
+}
+
+#contact .text .two-col{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 12px;
+}
+
 #contact .text-block .text-alert{
     color: #c1bfb9;
     font-size: 12px;
+    margin-top: 0;
 }
 
 #contact .text-block .text-alert.right{
     text-align: right;
+}
+
+#contact .container > div:nth-child(2){
+    padding-top: 45px;
 }
 
 #contact .card{
