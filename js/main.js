@@ -23,8 +23,10 @@ function toggleMenu() {
     }
 }
 
-for (var i = 0; i < menuLink.length; i++) {
-    menuLink[i].addEventListener('click', function(event) {
-        toggleButton.style.display = "none";
-    });
+if(window.innerWidth <= 960){
+    for (var i = 0; i < menuLink.length; i++) {
+        menuLink[i].addEventListener('click', function(event) {
+            toggleButton.style.display = "none";
+        });
+    }
 }
