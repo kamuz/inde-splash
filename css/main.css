@@ -826,3 +826,62 @@ footer .copy{
     margin-top: 25px;
     color: #a4a29d;
 }
+
+/*--------------------------------------------------
+  MOBILE VERSION
+--------------------------------------------------*/
+
+@media (max-width: 1200px){
+    .navbar li {
+        margin-right: 20px;
+    }
+
+    .container {
+        width: 960px;
+    }
+
+    #about .left-block {
+        padding-left: 20px;
+    }
+
+    #amenities .container {
+        min-height: 620px;
+    }
+
+    #amenities .amenities{
+        width: 1140px;
+        grid-template-columns: 3fr 2fr;
+    }
+
+    #amenities .amenities ul{
+        padding-left: 0;
+    }
+
+    #amenities .amenities h3.title.vertical.right{
+        right: -190px;
+    }
+
+    #amenities .amenities > div > img{
+        width: 40%;
+        top: 5px;
+    }
+
+    #neighborhood .glance {
+        right: -30px;
+    }
+    ul.color-bullet {
+        padding-left: 20px;
+    }
+}
+
+@media (max-width: 960px){
+
+}
+
+@media (max-width: 768px){
+
+}
+
+@media (max-width: 480px){
+
+}
