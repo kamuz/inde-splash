@@ -189,6 +189,10 @@ header .header{
     height: 100px;
 }
 
+img.logo:nth-child(2){
+    display: none;
+}
+
 /*--------------------------------------------------
   TOP MENU
 --------------------------------------------------*/
@@ -220,6 +224,10 @@ header .header{
 
 .navbar a.active {
     border-bottom: 18px solid #f5f3ee;
+}
+
+.navbar a.icon{
+    display: none;
 }
 
 /*--------------------------------------------------
@@ -352,17 +360,29 @@ header .header{
     grid-template-columns: 2fr 1fr;
 }
 
-#amenities .amenities > div > img{
-    position: relative;
-    top: -35px;
-    display: inline-block;
+#amenities .amenities > div:first-child {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-left: 50px;
+    grid-column-gap: 30px;
 }
 
-#amenities .amenities > div > img:nth-child(1){
+#amenities .amenities > div:first-child div{
+    position: relative;
+    top: -36px;
+    display: block;
+    height: 120%;
+}
+
+#amenities .amenities > div img{
+    width: 100%;
+}
+
+#amenities .amenities > div img:nth-child(1){
     margin-left: 50px;
 }
 
-#amenities .amenities > div > img:nth-child(2){
+#amenities .amenities > div img:nth-child(2){
     left: 30px;
 }
 
@@ -657,8 +677,8 @@ ul.color-bullet li::before {
     margin-right: 5px;
 }
 
-#map .google-map img{
-    float: right;
+#map .google-map .google-map-frame{
+    height: 100%;
 }
 
 #map .container{
@@ -669,6 +689,7 @@ ul.color-bullet li::before {
 #map .card{
     position: absolute;
     z-index: 10;
+    width: 100%;
 }
 
 #map .grey-brush{
@@ -832,12 +853,17 @@ footer .copy{
 --------------------------------------------------*/
 
 @media (max-width: 1200px){
+
     .navbar li {
         margin-right: 20px;
     }
 
     .container {
         width: 960px;
+    }
+
+    ul.color-bullet {
+        padding-left: 20px;
     }
 
     #about .left-block {
@@ -849,39 +875,207 @@ footer .copy{
     }
 
     #amenities .amenities{
-        width: 1140px;
+        width: 96%;
         grid-template-columns: 3fr 2fr;
     }
 
     #amenities .amenities ul{
-        padding-left: 0;
+        padding-left: 30px;
     }
 
     #amenities .amenities h3.title.vertical.right{
         right: -190px;
     }
 
-    #amenities .amenities > div > img{
-        width: 40%;
+    #amenities .amenities > div:first-child div{
+        position: relative;
+        display: inline-block;
+        margin-right: 0;
+    }
+
+    #amenities .amenities > div > div > img:nth-child(1){
+        margin-left: 5px;
+    }
+
+    #amenities .amenities > div > div > img:nth-child(2){
+        left: 2px;
+    }
+
+    #amenities .amenities > div > div img{
+        width: 100%;
         top: 5px;
     }
 
     #neighborhood .glance {
         right: -30px;
     }
-    ul.color-bullet {
-        padding-left: 20px;
+
+    #map .google-map .google-map-frame{
+        width: 96%;
     }
+
 }
 
 @media (max-width: 960px){
+
+    .container {
+        width: 95%;
+    }
+
+    #amenities .amenities{
+        width: 95%;
+    }
+
+    #amenities .amenities > div:first-child {
+        padding-left: 20px;
+        grid-column-gap: 20px;
+    }
+
+    #amenities .amenities > div:first-child div{
+        top: -27px;
+    }
+
+    #amenities .amenities ul{
+        padding-left: 30px;
+    }
+
+    .navbar {
+        position: relative;
+    }
+
+    .navbar #menu-links {
+        display: none;
+        position: absolute;
+        top: 90px;
+        right: 0;
+        background-color: rgba(0, 0, 0, .9);
+        width: 100%;
+    }
+
+    .navbar #menu-links ul{
+        padding: 20px;
+        margin: 0;
+    }
+
+    .navbar #menu-links ul li{
+        margin-right: 0;
+    }
+
+    .navbar #menu-links ul li{
+        display: block;
+    }
+
+    .navbar #menu-links ul li a {
+        padding: 14px 16px;
+        text-decoration: none;
+        display: block;
+        color: #fff;
+    }
+
+    .navbar #menu-links ul li a.active{
+        border: none;
+    }
+
+    .navbar a.icon {
+        display: block;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        font-size: 40px;
+    }
+
+    #about .left-block > div > img{
+        position: static;
+    }
+
+    #map .card{
+        width: 96%;
+    }
+
+    #map .container{
+        height: 1500px;
+    }
+
+    #map .border > div {
+        grid-template-columns: 1fr;
+    }
+
+    #map .google-map .google-map-frame{
+        height: 700px;
+    }
+
+    #map .border nav a{
+        font-size: 20px;
+    }
 
 }
 
 @media (max-width: 768px){
 
+    header .header{
+        grid-template-columns: 1fr;
+        grid-column-gap: 20px;
+    }
+
+    .navbar #menu-links {
+        top: -6px;
+    }
+
+    .navbar a.icon {
+        top: -90px;
+    }
+
+    #about .left-block > div > img{
+        position: static;
+    }
+
+    #amenities .container{
+        margin-top: -30px;
+    }
+
+    #amenities .amenities {
+        grid-template-columns: 2fr 2fr;
+        margin-top: 190px;
+    }
+
+    #amenities .amenities > div:first-child{
+        grid-template-columns: 1fr;
+    }
+
+    #amenities .amenities > div:first-child div:first-child{
+        display: none;
+    }
+
+    #map .border nav{
+        grid-template-columns: 1fr;
+    }
+
+    #map .container {
+        height: 1720px;
+    }
+
 }
 
 @media (max-width: 480px){
+
+    img.logo:nth-child(1){
+        display: none;
+    }
+
+    img.logo:nth-child(2){
+        display: block;
+    }
+
+    #menu-links{
+        width: 100%;
+    }
+
+    .navbar a.icon{
+        top: -85px;
+    }
+
+    .navbar #menu-links {
+        top: -2px;
+    }
 
 }

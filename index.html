@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Inde Splash</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body id="top">
@@ -14,16 +15,21 @@
                 <div>
                     <a data-scroll href="#top">
                         <img src="img/logo.png" alt="Logo" class="logo">
+                        <img src="img/logo-mini.png" alt="Logo" class="logo">
                     </a>
                 </div>
-                <nav class="navbar">
-                    <ul>
-                        <li><a href="#amenities">Amenities</a></li>
-                        <li><a href="#floorplans">Floorplans</a></li>
-                        <li><a href="#neighborhood">Neighborhood</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </nav>
+                <div class="navbar">
+                    <nav  id="menu-links">
+                        <ul>
+                            <li><a href="#amenities">Amenities</a></li>
+                            <li><a href="#floorplans">Floorplans</a></li>
+                            <li><a href="#neighborhood">Neighborhood</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </nav>
+                    <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
+                        <i class="fa fa-bars"></i>
+                    </a>
             </div>
         </div>
     </header>
@@ -82,8 +88,8 @@
         </div>
         <div class="amenities">
             <div>
-                <img src="img/image_04.jpg" alt="Alt">
-                <img src="img/image_03.jpg" alt="Alt">
+                <div style="background: url(img/image_04.jpg) no-repeat; background-size: cover; "></div>
+                <div style="background: url(img/image_03.jpg) no-repeat; background-size: cover; "></div>
             </div>
             <div>
                 <h3 class="title vertical right">Your Amenities</h3>
@@ -242,7 +248,7 @@
                             </ol>
                         </div>
                         <div class="google-map">
-                            <img src="img/map.jpg" alt="Map">
+                            <div class="google-map-frame" style="background: url(img/map.jpg) no-repeat; background-size: cover;"></div>
                         </div>
                     </div>
                 </div>
