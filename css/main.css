@@ -923,7 +923,7 @@ footer .copy{
     }
 
     #contact .card{
-        margin-left: 20px;
+        margin-left: 0;
     }
 
     #amenities .green-brush,
@@ -1088,6 +1088,10 @@ footer .copy{
         text-align: center;
     }
 
+    .container .two-logo div:last-child{
+        margin-bottom: 200px;
+    }
+
     #about .text-block{
         width: 93%;
         position: relative;
@@ -1162,6 +1166,7 @@ footer .copy{
 
     #neighborhood .right-block{
         padding: 20px 0;
+        right: 0;
     }
 
     #neighborhood .right-block img{
@@ -1192,7 +1197,7 @@ footer .copy{
 
     #contact .container > div:nth-child(2){
         text-align: right;
-        margin-right: 20px;
+        margin-right: 0;
     }
 
     #contact .container > div:nth-child(2) .card{
