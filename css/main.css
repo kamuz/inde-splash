@@ -239,6 +239,12 @@ img.logo:nth-child(2){
     position: relative;
 }
 
+.hero .hero-image{
+    background: url(../img/hero_image.jpg) no-repeat;
+    background-size: cover;
+    min-height: 600px;
+}
+
 .hero .coming{
     background-color: var(--turquoise);
     color: #fff;
@@ -387,7 +393,7 @@ img.logo:nth-child(2){
 }
 
 #amenities .amenities ul{
-    padding-left: 20px;
+    padding-left: 50px;
 }
 
 ul.color-bullet{
@@ -636,6 +642,7 @@ ul.color-bullet li::before {
 
 #map .border > div .address-list{
     padding: 30px 0 0 30px;
+    background: url(../img/drink.png) no-repeat bottom right;
 }
 
 #map .border > div .address-list h2{
@@ -823,6 +830,7 @@ ul.color-bullet li::before {
 footer div{
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 footer .social-buttons{
@@ -854,6 +862,10 @@ footer .copy{
 
 @media (max-width: 1200px){
 
+    .hero .hero-image{
+        min-height: 500px;
+    }
+
     .navbar li {
         margin-right: 20px;
     }
@@ -877,10 +889,6 @@ footer .copy{
     #amenities .amenities{
         width: 96%;
         grid-template-columns: 3fr 2fr;
-    }
-
-    #amenities .amenities ul{
-        padding-left: 30px;
     }
 
     #amenities .amenities h3.title.vertical.right{
@@ -910,8 +918,23 @@ footer .copy{
         right: -30px;
     }
 
-    #map .google-map .google-map-frame{
-        width: 96%;
+    #floorplans .featuring{
+        left: 20px;
+    }
+
+    #contact .card{
+        margin-left: 20px;
+    }
+
+    #amenities .green-brush,
+    #neighborhood .grey-brush,
+    #map .grey-brush,
+    #map .green-brush{
+        display: none;
+    }
+
+    footer .social-buttons{
+        margin-left: 0;
     }
 
 }
@@ -920,6 +943,14 @@ footer .copy{
 
     .container {
         width: 95%;
+    }
+
+    .hero .hero-image{
+        min-height: 400px;
+    }
+
+    #about .left-block > div > img{
+        width: 100%;
     }
 
     #amenities .amenities{
@@ -984,8 +1015,37 @@ footer .copy{
         font-size: 40px;
     }
 
+    #about .left-block{
+        padding-left: 0;
+    }
+
     #about .left-block > div > img{
         position: static;
+    }
+
+    #floorplans .featuring{
+        left: 0;
+    }
+
+    #floorplans .text-block{
+        width: auto;
+        margin-bottom: 50px;
+    }
+
+    #floorplans .wide-buttons > div > div{
+        font-size: 40px;
+    }
+
+    #neighborhood .glance{
+        display: none;
+    }
+
+    #neighborhood .right-block{
+        float: none;
+    }
+
+    #map{
+        padding: 50px 0;
     }
 
     #map .card{
@@ -993,7 +1053,7 @@ footer .copy{
     }
 
     #map .container{
-        height: 1500px;
+        height: 1420px;
     }
 
     #map .border > div {
@@ -1012,6 +1072,32 @@ footer .copy{
 
 @media (max-width: 768px){
 
+    .hero .hero-image{
+        min-height: 300px;
+    }
+
+    .hero .coming{
+        top: 80px;
+    }
+
+    .container .two-logo{
+        grid-template-columns: 1fr;
+    }
+
+    .container .two-logo div{
+        text-align: center;
+    }
+
+    #about .text-block{
+        width: 93%;
+        position: relative;
+        margin-top: -400px;
+    }
+
+    #about .left-block{
+        height: auto;
+    }
+
     header .header{
         grid-template-columns: 1fr;
         grid-column-gap: 20px;
@@ -1029,13 +1115,21 @@ footer .copy{
         position: static;
     }
 
+    #about .left-block{
+        top: -200px;
+    }
+
     #amenities .container{
         margin-top: -30px;
     }
 
     #amenities .amenities {
         grid-template-columns: 2fr 2fr;
-        margin-top: 190px;
+        margin-top: 70px;
+    }
+
+    #amenities .text-block{
+        position: static;
     }
 
     #amenities .amenities > div:first-child{
@@ -1046,12 +1140,71 @@ footer .copy{
         display: none;
     }
 
+    #floorplans .text-block{
+        margin-top: 0;
+    }
+
+    #floorplans .container{
+        grid-template-columns: 1fr;
+    }
+
+    #floorplans .container .text-block + div{
+        text-align: right;
+    }
+
+    #floorplans .container .text-block + div .featuring{
+        text-align: left;
+    }
+
+    #neighborhood .container{
+        width: 100%;
+    }
+
+    #neighborhood .right-block{
+        padding: 20px 0;
+    }
+
+    #neighborhood .right-block img{
+        width: 100%;
+    }
+
+    #neighborhood .text-block{
+        width: 90%;
+        margin: -400px auto 30px;
+        position: sticky;
+    }
+
     #map .border nav{
         grid-template-columns: 1fr;
     }
 
     #map .container {
-        height: 1720px;
+        height: 1690px;
+    }
+
+    #map .border > div .address-list{
+        background: none;
+    }
+
+    #contact .container{
+        grid-template-columns: 1fr;
+    }
+
+    #contact .container > div:nth-child(2){
+        text-align: right;
+        margin-right: 20px;
+    }
+
+    #contact .container > div:nth-child(2) .card{
+        text-align: left;
+    }
+
+    footer div{
+        justify-content: center;
+    }
+
+    footer .social-buttons{
+        margin-left: 30px;
     }
 
 }
@@ -1066,6 +1219,10 @@ footer .copy{
         display: block;
     }
 
+    .text-block h2{
+        font-size: 36px;
+    }
+
     #menu-links{
         width: 100%;
     }
@@ -1076,6 +1233,124 @@ footer .copy{
 
     .navbar #menu-links {
         top: -2px;
+    }
+
+    #about .text-block{
+        width: 92%;
+    }
+
+    #amenities .amenities{
+        display: block;
+        margin: 40px auto 10px;
+    }
+
+    #amenities .amenities h3.title.vertical.right{
+        right: -200px;
+        margin-top: 0;
+    }
+
+    #floorplans .wide-buttons > div > div{
+        font-size: 30px;
+    }
+
+    #floorplans .container{
+        display: block;
+        padding-bottom: 40px;
+    }
+
+    #floorplans .wide-buttons{
+        top: -50px;
+    }
+
+    #floorplans .text-block{
+        width: 90%;
+        margin: 0 auto 40px;
+    }
+
+    #floorplans .container .text-block + div{
+        text-align: left;
+        margin-right: 0;
+    }
+
+    #floorplans .container .text-block + div img{
+        width: 100%;
+    }
+
+    #floorplans .featuring{
+        width: auto;
+        top: -40px;
+        left: 0;
+    }
+
+    #floorplans .table{
+        top: 0;
+    }
+
+    #floorplans .table{
+        width: 93%;
+    }
+
+    #neighborhood .text-block{
+        margin-top: -300px;
+        width: 86%;
+    }
+
+    #about .left-block{
+        height: auto;
+    }
+
+    #map .container{
+        height: auto;
+    }
+
+    #map .card{
+        width: 92%;
+        position: static;
+    }
+
+    #map .border > div{
+        display: block;
+    }
+
+    #map .border > div .address-list ol{
+        column-count: 1;
+        height: auto;
+        padding-bottom: 20px;
+    }
+
+    #map .border nav a {
+        text-align: left;
+        padding-left: 20px;
+        line-height: 60px;
+    }
+
+    #map .border > div .address-list ol li{
+        width: 100%;
+    }
+
+    #contact .container{
+        display: block;
+    }
+
+    #contact .card{
+        margin: -100px 0 50px 0;
+        width: 96%;
+    }
+
+    #contact .container > div:nth-child(2){
+        margin-right: 0;
+    }
+
+    #contact .container > div:nth-child(2) > img{
+        width: 100%;
+    }
+
+    #contact .text .two-col{
+        grid-template-columns: 1fr;
+    }
+
+    footer .copy{
+        text-align: center;
     }
 
 }
